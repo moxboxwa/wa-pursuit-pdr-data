@@ -26,5 +26,6 @@ king.tbl <- read_xlsx(
   sheet = "Table",
   skip = 2
 )
-  
+
 save.image(file="County-SO-Data/King/King.rda")
+  
