@@ -11,8 +11,8 @@ library(readxl)
 #drive_get("King County/King.xlsx")
 
 # Download an excel file from the drive
-dl <- drive_download("King County/King.xlsx",
-                     path = "County-SO-Data/King/King.xlsx", 
+dl <- drive_download(file = "King County/King.xlsx", # google drive filename
+                     path = "County-SO-Data/King/King.xlsx", # local filename
                      overwrite = TRUE, 
                      type = "xlsx")
 
