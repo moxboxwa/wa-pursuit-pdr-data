@@ -1,0 +1,3 @@
+Incident Number	Call Date/Time	Officers	Incident Type	Dispositions	Location	ORI	Jurisdiction	
+===============	===================	==========================================================	=============	=============================	================================	=========	============	
+2023-00007810	11/27/2023 20:12:35	 PTPD0063 - STANTON, PTPD0052 - HANSEN, PTPD0093 - BERTEIG	ELU - Eluding	 B - 1, A - 1, V - 1, HBD - 1	51 MASONIC HALL RD, Port Hadlock	WA0160100	PTPD    	
