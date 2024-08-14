@@ -19,12 +19,12 @@ dl <- drive_download(file = "Asotin County/Asotin.xlsx", # google drive filename
 # Read data from the downloaded file
 # KC gave us incident-based data, so we have both that and the pivot table
 
-# have not got this far yet for asotin king.inci <- read_xlsx("County-SO-Data/King/King.xlsx")
+asotin.inci <- read_xlsx("County-SO-Data/Asotin/Asotin.xlsx")
 
-#king.tbl <- read_xlsx(
-#  "County-SO-Data/King/King.xlsx",
-#  sheet = "Table",
-#  skip = 2
-#)
-  
-save.image(file="County-SO-Data/King/King.rda")
+asotin.tbl <- read_xlsx(
+  "County-SO-Data/Asotin/Asotin.xlsx",
+  sheet = "Table",
+  skip = 2
+)
+
+save.image(file="County-SO-Data/Asotin/Asotin.rda")
