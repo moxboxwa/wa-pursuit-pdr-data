@@ -11,19 +11,19 @@ drive_find("Benton County", type="folder")
 drive_get("Benton County/Benton.xlsx")
 
 # Download an excel file from the drive
-dl <- drive_download(file = "Benton County/Benton.xlsx", # google drive filename
-                     path = "County-SO-Data/Benton/Benton.xlsx", # local filename
+dl <- drive_download(file = "WSP/WSP.xlsx", # google drive filename
+                     path = "County-SO-Data/WSP/WSP.xlsx", # local filename
                      overwrite = TRUE, 
                      type = "xlsx")
 
 # Read data from the downloaded file
 
-benton.inci <- read_xlsx("County-SO-Data/Benton/Benton.xlsx")
+wsp.inci <- read_xlsx("County-SO-Data/WSP/WSP.xlsx")
 
-benton.tbl <- read_xlsx(
-  "County-SO-Data/Benton/Benton.xlsx",
+wsp.tbl <- read_xlsx(
+  "County-SO-Data/WSP/WSP.xlsx",
   sheet = "Table",
   skip = 2
 )
 
-save.image(file="County-SO-Data/Benton/Benton.rda")
+save.image(file="County-SO-Data/WSP/WSP.rda")
