@@ -7,23 +7,21 @@ library(readxl)
 # The googledrive functions should pop up an authorization dialog in your
 # web-browser if necessary
 
-drive_find("Grant County", type="folder")
-#drive_get("Grant County/Grant.xlsx")
+drive_find("Mason County", type="folder")
 
 # Download an excel file from the drive
-dl <- drive_download(file = "Grant County/Grant.xlsx", # google drive filename
-                     path = "County-SO-Data/Grant/Grant.xlsx", # local filename
+dl <- drive_download(file = "Mason County/Mason.xlsx", # google drive filename
+                     path = "County-SO-Data/Mason/Mason.xlsx", # local filename
                      overwrite = TRUE, 
                      type = "xlsx")
 
 # Read data from the downloaded file
 
-#grant has no inci level
+#mason has no inci level
 
-grant.tbl <- read_xlsx(
-  "County-SO-Data/Grant/Grant.xlsx",
-  sheet = "Sheet1",
+mason.tbl <- read_xlsx(
+  "County-SO-Data/Mason/Mason.xlsx",
   skip = 2
 )
 
-save.image(file="County-SO-Data/Grant/Grant.rda")
+save.image(file="County-SO-Data/Mason/Mason.rda")
