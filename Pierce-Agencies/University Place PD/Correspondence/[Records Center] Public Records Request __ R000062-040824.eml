@@ -1,0 +1,199 @@
+Delivered-To: pnwresearch24@gmail.com
+Received: by 2002:a05:6124:28c:b0:39a:b893:9637 with SMTP id s12csp1964114vln;
+        Mon, 8 Apr 2024 12:00:32 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEjsLbVzwfepfk7tGifFDOdYUwE13EDMwSBRlif79GKj/7OSFfnAC1eT31g3lzUiKiRn/aN
+X-Received: by 2002:a25:5842:0:b0:dc7:45d3:ffd0 with SMTP id m63-20020a255842000000b00dc745d3ffd0mr7756038ybb.1.1712602831812;
+        Mon, 08 Apr 2024 12:00:31 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1712602831; cv=none;
+        d=google.com; s=arc-20160816;
+        b=io28q5nP0EOrQW5/PY3j1fjS18Jy6CvBZ7OeH7cJqMiek/9upU5p0ikKilI63bwsdl
+         uCbCgQ3XZJKXqG5LCjDx7XsEn95/4h1A//e+T25qHulVpaE6nmicSaD05/V54xk8Wn9L
+         JmLKak4K5yF8Ihx10RqzUKmLjQum0qZ94G+WspIZL1zsUXLSD+4qdIQOR6zE46epGRDX
+         SWHBomTB0xPsvXICejEp21Uxg0Tf8Eb7vX+8+tNc4vJ2ltEjpM38fv0bUixZedPkHNBk
+         VfpVRLF8gd/WGoiTZSUfjJ9zYeJFQSexuh2dxE/3loDt4ZB/A8bm2OKcPOcLAB//j/kB
+         9WNw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:mime-version:from:date
+         :content-transfer-encoding:dkim-signature:dkim-signature;
+        bh=84a8Yo6HrD7Y9DB0JPMcVFdABmXJYOrEHqZ8ueP8Ihs=;
+        fh=kSYSOOICBm3qMDa7FxVN6+rMti4bQCLukRFbDz/J+tI=;
+        b=sKMC0wA48CDYhXeF5KoK6lhcr6pDz48eSc3fMkAoioBKlQ/xCHgm+k7R/cRxhcV2XX
+         nQboQ+5MXTnB2Jkt+poXbAFwckdHGdWgTIqiUnHP/EabRj+pw4/X9B7Hd4fBdYRoe1tE
+         SCHszivXL/Qlg08mC/SnTdYpODpkGbbOyAZaEpjpZwCtN1jVMbh4cYlF6r3cgZ+0/zp2
+         EN+at4BwrS2pWmUzm6a+5PR/W3ELDg6rY3QGFxmcGUKswDRBYovfljc9S7prkF2XlHaU
+         MZl4iX5Vl6vvxr3opTWwOG86pg7etzASW1YmGxKRURqa3U1kgkSI/ljbUrRhjkUzg3z6
+         nfyw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mycusthelp.net header.s=s1 header.b=Aw8tgp+W;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=EYlWTjgv;
+       spf=pass (google.com: domain of bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net designates 168.245.121.10 as permitted sender) smtp.mailfrom="bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mycusthelp.net
+Return-Path: <bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net>
+Received: from o1.sgmail.mycusthelp.net (o1.sgmail.mycusthelp.net. [168.245.121.10])
+        by mx.google.com with ESMTPS id s190-20020a25c2c7000000b00dc250ea1057si3205991ybf.233.2024.04.08.12.00.30
+        for <pnwresearch24@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 08 Apr 2024 12:00:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net designates 168.245.121.10 as permitted sender) client-ip=168.245.121.10;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mycusthelp.net header.s=s1 header.b=Aw8tgp+W;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=EYlWTjgv;
+       spf=pass (google.com: domain of bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net designates 168.245.121.10 as permitted sender) smtp.mailfrom="bounces+8387795-9531-pnwresearch24=gmail.com@sgmail.mycusthelp.net";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mycusthelp.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mycusthelp.net;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	x-feedback-id:to:cc:content-type:from:subject:to;
+	s=s1; bh=84a8Yo6HrD7Y9DB0JPMcVFdABmXJYOrEHqZ8ueP8Ihs=;
+	b=Aw8tgp+WCwUphjs9s07Rys7104D3rIwApqLEzH85x0fBEtTlVDAWvDt0OASgyhgRtsQd
+	PJsHj06GPRcfjciCWtQcj2e2hlp6fnJe3B2jOAKMZ8G1Si0LtMKHwgZhbnUSWz5hACWQxp
+	Oz3NfEBOVYhfV5d6eoUDJdk/7INV5C13ItfLRVnG4DVScQERHmOfO+CVOr4KIuiH6sEP7u
+	nJPX2Tn4R+8msjTfQ2XQT2yPqsYlBWJi+eQIdJhXtNT0sY/v+ZNbFBq/4jWTQVITKFCfh/
+	04dme5KKaNV0yv5zdx9Buvpk182Eh7Jd7nOs2C36Osbxc4Bc4JxpEe+AW0mKZc2Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	x-feedback-id:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=84a8Yo6HrD7Y9DB0JPMcVFdABmXJYOrEHqZ8ueP8Ihs=;
+	b=EYlWTjgviQ5T+CNLX8Ip7VTxpu6Q7bcox8avK5hSaTnTXjm6aJM5hePyYAh5afkFiX4b
+	BzYrEcQahnyi6v5PbxGDIU1MMbQ0fmZOfuHvht7xQTL19tIASgS37JduDgj29Pwmxnk3LK
+	LOCecE+IhCC4xFLFPz8uTseHiJfMkWDS4=
+Received: by filterdrecv-86675bc4b9-7w8zr with SMTP id filterdrecv-86675bc4b9-7w8zr-1-66143ECC-13
+        2024-04-08 19:00:28.268245766 +0000 UTC m=+1809281.904532381
+Received: from ODM4Nzc5NQ (unknown)
+	by geopod-ismtpd-20 (SG) with HTTP
+	id YUywDUX6RveP5RI6a891-w
+	Mon, 08 Apr 2024 19:00:28.218 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Mon, 08 Apr 2024 19:00:28 +0000 (UTC)
+From: University Place Request Center <universityplacewa@mycusthelp.net>
+Mime-Version: 1.0
+Message-ID: <YUywDUX6RveP5RI6a891-w@geopod-ismtpd-20>
+Subject: [Records Center] Public Records Request :: R000062-040824
+X-Feedback-ID: 8387795:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EyPLdOUWs7R1FzT73xZBFSCEcy42zfihWjV5lwkjgRvZ6baISrCTsQHkUr?=
+ =?us-ascii?Q?TmMNk=2F94wX+yriyLHKLiKv1A=2FKResD3nwPd8Omr?=
+ =?us-ascii?Q?qU0MGjI2OwPBrv3fSacHxpsmn6MgTbU7QlqABPQ?=
+ =?us-ascii?Q?tI7GT5NsF9BPUdJQDP8K7=2FAY8JmKX1crNTsLZhQ?=
+ =?us-ascii?Q?fDEO2gtpUxyAGankFv2qvCbKyfZWxS=2FP1k29x+S?=
+ =?us-ascii?Q?4B5TVHV4WZgHg47=2F5zzSrVfxT7oOZXk4yvjTp2Y?=
+ =?us-ascii?Q?LbCj5tROeO=2FUCEe7jPik+ohk8tm4yvRy4DXSbn2?=
+ =?us-ascii?Q?qS1FRQ38=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprAOrvJfireiuS7RI?=
+ =?us-ascii?Q?8CGQSIdY6WdJVGO0x7nx6Xgb57mP2=2FEEdEKtnoH?=
+ =?us-ascii?Q?XFB253k2h=2F=2FQYYpZp7weSGeXx+9imqDBBPRu846?=
+ =?us-ascii?Q?4+Q=2Ft0ZcjL4NrwB6bcWQ=2Fa2nQMTVjWgjF+=2Fjx6F?=
+ =?us-ascii?Q?4kPkvdtoRE1Luh=2FB4bWQmXXX3Q+j=2FoZq8rQ+s2y?=
+ =?us-ascii?Q?g=3D=3D?=
+To: "pnwresearch24@gmail.com" <pnwresearch24@gmail.com>
+X-Entity-ID: u001.jxajK57UIa225GzfMFDLcA==
+
+<html><body><br><br>--- Please respond above this line ---<br><br><div styl=
+e=3D"align: center; padding: 10px; border: 3px solid #808080; border-radius=
+: 5px;">
+<div><strong><span style=3D"color: #000000;"><img alt=3D"" src=3D"https://u=
+ploads.mycusthelp.com/UNIVERSITYPLACEWA/CityofUP-No-Background.png" /></spa=
+n></strong></div>
+<div><hr />
+<strong><span style=3D"color: #000000;"><br />
+</span></strong></div>
+<div><div><span style=3D"font-family: Verdana; font-size: 10px;">RE: PUBLIC=
+ RECORDS REQUEST of April 08, 2024, Reference # R000062-040824</span></div>=
+<div><span style=3D"font-family: Verdana; font-size: 10px;">&nbsp;</span></=
+div><div><span style=3D"font-family: Verdana; font-size: 10px;">Dear Shira =
+Idris,&nbsp;</span></div><div><span style=3D"font-family: Verdana; font-siz=
+e: 10px;">&nbsp;</span></div><div><span style=3D"font-family: Verdana; font=
+-size: 10px;">The City of University Place received a public record request=
+ from you on April 08, 2024, for the following:</span></div><div><span styl=
+e=3D"font-family: Verdana; font-size: 10px;">&nbsp;</span></div><div><span =
+style=3D"font-family: Verdana; font-size: 10px;"><strong>&ldquo;I am reques=
+ting the following records from the University Place Police Department: <br=
+ /><br />1) A list of all vehicle pursuit incidents that your agency was in=
+volved in from 2019 through 2023, as a line-level data extract from your re=
+cords management system (RMS), including incident date, report number, and =
+any/all other RMS data fields that are not required to be redacted by law;<=
+br />2) Policy manuals, rules, and regulations for your agency relating to =
+vehicle pursuits, including record-keeping and data collection on pursuits,=
+ that were in effect between 2019 and 2023;<br />3) Reports summarizing and=
+ analyzing the vehicle pursuit data for your agency, produced for internal =
+and/or external publication(e.g.  periodic reports required for WASPC and/o=
+r CALEA accreditation, newsletters, materials provided to government offici=
+als) produced between 2019 through 2023.; <br /><br />Where possible, I wou=
+ld like the records provided electronically. This information is not being =
+sought for commercial purposes. The Washington Public Records Act requires =
+a response to this request be made within five (5) business days. If access=
+ to the records I am requesting will take longer than this amount of time, =
+please contact me with information about when I might expect copies or the =
+ability to inspect the requested records. If you deny part or all of my req=
+uest, please cite each specific exemption you feel justifies the refusal to=
+ release the information and notify me of the appeal procedures available t=
+o me under the law.<br /><br />Thank you for your assistance.&rdquo;</stron=
+g></span></div><div><span style=3D"font-family: Verdana; font-size: 10px;">=
+&nbsp;</span></div><div><span style=3D"font-family: Verdana; font-size: 10p=
+x;">The City has no Police records responsive to your public records reques=
+t.<br /><br />Please be aware that as a contract city, many of our services=
+ are provided by other agencies.</span></div><div><span style=3D"font-famil=
+y: Verdana; font-size: 10px;"><br />Contact the following agencies for assi=
+stance in obtaining the following records:<br /><br />HISTORICAL PERMIT REC=
+ORDS - Construction prior to the City&rsquo;s incorporation in 1995 was per=
+mitted through Pierce County.<br />&bull; Pierce County - Tel. 253.798.3739=
+<br />&bull; Website &ndash; http://palsonline.co.pierce.wa.us/<br /><br />=
+ELECTRICAL &amp; WATER PERMITS <br />&bull; Tacoma Public Utilities &ndash;=
+ Tel. 253.383.2471<br />&bull; Website &ndash; https://www.mytpu.org/<br />=
+<br />FIRE HAZARDOUS MATERIALS INCIDENTS <br />&bull; West Pierce Fire &amp=
+; Rescue - Tel. 253.564.1623 <br />&bull; Website - http://www.westpierce.o=
+rg/contact/public-records-requests/<br /><br />FIRE INVESTIGATION<br />&bul=
+l; Pierce County Emergency Management Fire Prevention Bureau &ndash; Tel. 2=
+53.798.7179<br />&bull; Website - https://www.co.pierce.wa.us/980/Fire-Prev=
+ention-Bureau<br /><br />GARBAGE <br />&bull; University Place Refuse &ndas=
+h; Tel. 253.564.3212<br />&bull; Lakewood Refuse &ndash; Tel. 253.588.1705<=
+br /><br />POLICE<br />&bull; South Sound 911 &ndash; Reports - South Sound=
+ 911 &ndash; Tel. 253.798.7441<br />&bull; Website - https://southsound911.=
+org/records/public-records-requests/<br /><br />&bull; Pierce County &ndash=
+; Records (other than Reports) &ndash; Tel. 253.798.7769<br />&bull; Websit=
+e - https://www.piercecountywa.org/5554/Records-Available-Online<br /><br /=
+>PROPERTY TAXES<br />&bull; Pierce County Assessor  &ndash; Tel. 253.798.74=
+87<br />&bull; Website - https://www.co.pierce.wa.us/91/Assessor---Treasure=
+r<br /><br />SEWER PERMITS &amp; CONNECTIONS <br />&bull; Pierce County Sew=
+er Utilities &ndash; Tel. 253.798.4050<br />&bull; Website - https://www.co=
+.pierce.wa.us/1643/Sewer<br /><br />SEPTIC SYSTEMS &amp; AS-BUILTS <br />&b=
+ull; Tacoma/Pierce County Health Department &ndash; Tel. 253.798.6470<br />=
+&bull; Website - https://www.tpchd.org/healthy-homes/septic-systems<br /></=
+span></div><div>&nbsp;</div><div><div><span style=3D"font-family: Verdana; =
+font-size: 10px;">If you have any questions, please feel free to contact me=
+.</span></div><div><span style=3D"font-family: Verdana; font-size: 10px;">&=
+nbsp;</span></div><div><span style=3D"font-family: Verdana; font-size: 10px=
+;">Sincerely,<br /><br />Debora Nicholas<br />Deputy City Clerk<br />City C=
+lerk&rsquo;s Office</span></div></div><div><span style=3D"font-family: Verd=
+ana; font-size: 10px;">Tel. 253-460-5427 </span></div></div>
+<hr />
+<span style=3D"font-size: 10pt;"></span>
+<div style=3D"text-align: left;">To monitor the progress or update this req=
+uest please log into the&nbsp;<a href=3D"https://u8387795.ct.sendgrid.net/l=
+s/click?upn=3Du001.PYICgxP3kfgZjR-2B4e9nPlIHigrqdViUj4ru-2Fz3MSeX1apB-2Bpxu=
+FpJAfFfdZ6bwMiXLoWkXbfalrW3noH-2BIhVu2vAM33VhNAV-2FqlAcsb26w-2Blqm9xzn9da1w=
+XGgX0dUxgCuGHHR0lmPViWHgyV8bJeA-3D-3D_WT7_-2Byp3S3FS10tn7X4SDcElz9nAeJwXkNz=
+ZRYCET9-2FFkHW7TIy981oqV-2B1QAekPcieMHyllUNq-2B4yksXLLVh-2BmskaQfu1qALikchm=
+GSINlcsmse9UQat55iq96jSPpxTqJCGw7X4sBz5HLv3WwRLg-2BCB4Imlb-2BJBIm6qVTEt1zNx=
+l2ljnxdyP56723Bz9YoZsRcn3P9yvqES1uviiF-2B67RDX-2BnrSLV1JgW-2BFZqdkSI1MQdjlN=
+rw3wgIL0hNGcCW8h3lkl7gKbyYq6pKvOFB-2FZOT3gwsayB8mMLhYM5mNAx15VkMiVRZ2TBzDgW=
+K7njrjqYtxA99T1AbNv-2B0M2JJ5P0l87tQSVK3GmfLBNmUAcuLIX9MdOWOYH0LMoCqXDG2mU3D=
+" target=3D"_blank" title=3D"Public Records Center">Public Records Center</=
+a></div>
+<div><center><br />
+<img title=3D"GovQA logo" src=3D"https://uploads.mycusthelp.com/WEBQASUPPOR=
+T/PoweredByGovQALogo.png" alt=3D"GovQA logo" /></center></div>
+</div><img src=3D"https://u8387795.ct.sendgrid.net/wf/open?upn=3Du001.iqJUc=
+FRg3X1uKxlQXqM8N9hR52CPXiiyX3m1WhzfC7oPHgfW6GkybmkdgVvdKxzkjQeUIXM6jIlMr6p3=
+q-2BPt0SIRHgmrrcZZRmglANyxZphuHIBLE-2F1geCEiQNP40qb-2Fb0FEBMkH99rjvuK5-2BHd=
+wZL0BZxV9GtW4Zux49VQEtu-2F5S4BNfM6mXogeQ3qdhnqUizuX6Zxy6ZisMdLqt7kSVJmu8tKl=
+vIjP5NRm1-2FNMf7J1fqZ-2Fh143pjh4Q3J4jMsZJGbDYtEoam419FockQUVbsgsFKCj4bs76IL=
+U99V-2Fu1M6-2FuzNuMjHttbkAVd0r57l-2BbuTuaZUBAGq-2BTCUAVrvMo3aJwXg3b-2Br5Dmy=
+xawPAiO0vThM4mEW4u86sFWFpxj9EiA1Odr-2Fos1WEwkcvd4NXw-3D-3D" alt=3D"" width=
+=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !=
+important;border-width:0 !important;margin-top:0 !important;margin-bottom:0=
+ !important;margin-right:0 !important;margin-left:0 !important;padding-top:=
+0 !important;padding-bottom:0 !important;padding-right:0 !important;padding=
+-left:0 !important;"/></body></html>

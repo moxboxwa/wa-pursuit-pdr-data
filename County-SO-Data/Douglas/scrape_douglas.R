@@ -17,7 +17,6 @@ dl <- drive_download(file = "Douglas County/Douglas.xlsx", # google drive filena
                      type = "xlsx")
 
 # Read data from the downloaded file
-# KC gave us incident-based data, so we have both that and the pivot table
 
 #does not have incident level data
 # douglas.inci <- read_xlsx("County-SO-Data/Douglas/Douglas.xlsx")

@@ -17,14 +17,13 @@ dl <- drive_download(file = "Cowlitz County/Cowlitz.xlsx", # google drive filena
                      type = "xlsx")
 
 # Read data from the downloaded file
-# KC gave us incident-based data, so we have both that and the pivot table
 
-# have not got this far yet for asotin king.inci <- read_xlsx("County-SO-Data/King/King.xlsx")
+cowlitz.inci <- read_xlsx("County-SO-Data/Cowlitz/Cowlitz.xlsx")
 
-#king.tbl <- read_xlsx(
-#  "County-SO-Data/King/King.xlsx",
-#  sheet = "Table",
-#  skip = 2
-#)
+cowlitz.tbl <- read_xlsx(
+  "County-SO-Data/Cowlitz/Cowlitz.xlsx",
+  sheet = "Table",
+  skip = 2
+)
 
-save.image(file="County-SO-Data/King/King.rda")
+save.image(file="County-SO-Data/Cowlitz/Cowlitz.rda")
