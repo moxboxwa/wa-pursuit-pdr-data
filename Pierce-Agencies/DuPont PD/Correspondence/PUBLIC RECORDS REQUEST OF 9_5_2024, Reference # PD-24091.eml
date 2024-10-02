@@ -1,0 +1,497 @@
+Delivered-To: pnwresearch24@gmail.com
+Received: by 2002:ab4:1d85:0:b0:3c6:d909:2663 with SMTP id d5csp363498vld;
+        Wed, 2 Oct 2024 14:51:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF7X/H0e7TjSacziuqFKX0c20fgBd81951iJcAayg6mG38jam9WLyiR/lH8xeSXWi5b1TH/
+X-Received: by 2002:a17:90b:3a86:b0:2da:8c28:6561 with SMTP id 98e67ed59e1d1-2e184814fabmr5025219a91.22.1727905880777;
+        Wed, 02 Oct 2024 14:51:20 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1727905880; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=D9Z2z+BLo+c98wkyfXbNRi7GPAWrLj2Q3kIoW8UnEMrcAQZQI6ZGY+fiPfps/KcBDu
+         KCk1laQLnczCHyedlkdMYdpX5j5kkCYHpoxiy4KeEUC8i7rbTA4KPf+rnve0gKYvtBYP
+         ARtwuWMI7UTlDo8HGWZJ70r5SM7gwiddDeJrIL9RQze+lYALJz4JBww8jHspKPS87Ynm
+         oKyTQksQzAp1JPGSvnV1QRBkNHpinRP9RHkbXa9QEayMspLB9wAEoWboRnMkNWprhQp3
+         3mFKbxL9TeImgPTYWEn7V9/JhwFHzVOLCvRvWDXRUWxB+1v155iKFERvU0HVVp+Ln0gi
+         NIVw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:content-language:accept-language:message-id:date
+         :thread-index:thread-topic:subject:cc:to:from:dkim-signature;
+        bh=a61ZeUYXuI6eYwKwZ62evgbKGUp7c5Uagl1S87ymKII=;
+        fh=7/zRmE1XbW37Xrr2UqY3DIHjxsOpMPoWKlklNpiVUfc=;
+        b=NPUCgWNT+WITJUbgo5tSrz+myHH5ys1q0uoeqIdtGH0CVifJvnAB50NZtamnlOLyTO
+         I6qsH9lzZILTNNt8EfWcWfZThWk2wmPuW06mNG8TFR0URiW6OnnAcHflUc6FmbXfrwsK
+         XU0gz9rjCGTqi5tLCawSoQ4pqeXHLwEEDXkkbZdYe+g4NGfOXKBaIc0zXyQiM2XSvpAU
+         na2aBiwCh2ieMLOwMzPNJbRayJElaA9nbGECUIPBlnqjw3BSF6KIjNmee3SKu36HXlQk
+         AXWH2oetZ14Re3t0t28AkudmLb/RgW3fmO8SZZ2kFpX9XoUJYReSRfs/zI0i2kYWdHBX
+         Zu0g==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@cityofdupont.onmicrosoft.com header.s=selector1-cityofdupont-onmicrosoft-com header.b=nP2ePvEv;
+       arc=pass (i=1 spf=pass spfdomain=dupontwa.gov dkim=pass dkdomain=dupontwa.gov dmarc=pass fromdomain=dupontwa.gov);
+       spf=pass (google.com: domain of police@dupontwa.gov designates 2a01:111:f403:c110::5 as permitted sender) smtp.mailfrom=Police@dupontwa.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dupontwa.gov
+Return-Path: <Police@dupontwa.gov>
+Received: from BN8PR09CU001.outbound.protection.outlook.com (mail-eastus2azlp170120005.outbound.protection.outlook.com. [2a01:111:f403:c110::5])
+        by mx.google.com with ESMTPS id 98e67ed59e1d1-2e19165d91dsi2389572a91.129.2024.10.02.14.51.20
+        for <pnwresearch24@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 02 Oct 2024 14:51:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of police@dupontwa.gov designates 2a01:111:f403:c110::5 as permitted sender) client-ip=2a01:111:f403:c110::5;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cityofdupont.onmicrosoft.com header.s=selector1-cityofdupont-onmicrosoft-com header.b=nP2ePvEv;
+       arc=pass (i=1 spf=pass spfdomain=dupontwa.gov dkim=pass dkdomain=dupontwa.gov dmarc=pass fromdomain=dupontwa.gov);
+       spf=pass (google.com: domain of police@dupontwa.gov designates 2a01:111:f403:c110::5 as permitted sender) smtp.mailfrom=Police@dupontwa.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dupontwa.gov
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=nIBMWMz9+JkKLG/+O/TWusJmLQenBToPLabaQj79iLa2gOrdWGNpmh47yAqFo3xOQVTuHmOXOf1/LQuXVGcFHYSD86NPv0r8yaMe+YmtiMKLf7IW8bY3jwmiZJ63njjQieCpwR0Y7GkNHtmjFmGBWGHyhG1MNTPKBxY3CbfdBkMdlN4lshHUtiXuGF7va2yeZazozqmL6dubxy50+1QoDo0fVQOYHIrxk506rTzrh4Y2C+IQDJb4IONrWX/HLf3+WB8pUzm9lLl38NlTKyZgZbYGME3iTRjyTD/KG6LiBD/dMOCWp8j4tuCGsylLw6ollVhtRqxvK3Ihezj6JYWGBA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=a61ZeUYXuI6eYwKwZ62evgbKGUp7c5Uagl1S87ymKII=;
+ b=inkLkTn6MwWNec3P6WPqWUlMc4MVWOGBvdUhw/Fsnw8T/ADDsWdHT0wQMkHw4CPzTGAAcgtsnNXww5mJZTE4GrqkkQ+lyMpxe8oBdvEVBcVDfBV45rO4PJ8WrHocS6ho3ZSCZDhmDlNQwsqLqpYpmnGDJ3Md/a4swe2r+i3/cKBY+ahF0XySQAoHI0hJG4z/+IAcObL4PWIG1opnPoBX93g3QjF/IszlLMhZskmeWIWSHd9dSPrluuWMGMjd9Tz4E5ZqscU1ajiixmY+EHj47d385fwLw9dvmwZ1CkShgUBFEPGWX2adCddNad5OCejuULjWKBLHRM6k2oS58MUmug==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=dupontwa.gov; dmarc=pass action=none header.from=dupontwa.gov;
+ dkim=pass header.d=dupontwa.gov; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=cityofdupont.onmicrosoft.com; s=selector1-cityofdupont-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=a61ZeUYXuI6eYwKwZ62evgbKGUp7c5Uagl1S87ymKII=;
+ b=nP2ePvEvLhoOHEnpUxc2e/ia/+i0JkT6rafgl3Ltzdf/43eqBU8SrxJBdwIo6H4iXU9YN8QkdlKGjf9jxArJD/Oa6B8UK+i/HwgagR+VX32LQMyzLDpsclMwK177YHYXgUYJL7YUjdC7/UQRH5UH186joA6m7hyr2YAsAe3LpaEWEmR3DSuwrzP4Gt3X/xFe9VDFy5cvzIhJXyi2kNBsOwb5JFMoBBU/AnQeRjukYnnMUUpeRFFEz21bhtpCNFJ2i01XJ8cb4D61dfz/colw1RNCyzB2Vi+UdEg7OACRPMqUxEW3YGncM0ouS/uzZOw24XRbNkbwF1CtjU2iMkfLTQ==
+Received: from PH0PR09MB8026.namprd09.prod.outlook.com (2603:10b6:510:63::10)
+ by BY3PR09MB8739.namprd09.prod.outlook.com (2603:10b6:a03:348::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8026.16; Wed, 2 Oct
+ 2024 21:51:16 +0000
+Received: from PH0PR09MB8026.namprd09.prod.outlook.com
+ ([fe80::641f:f890:ddab:e7a7]) by PH0PR09MB8026.namprd09.prod.outlook.com
+ ([fe80::641f:f890:ddab:e7a7%7]) with mapi id 15.20.8026.016; Wed, 2 Oct 2024
+ 21:51:16 +0000
+From: Dupont Police Department <Police@dupontwa.gov>
+To: "pnwresearch24@gmail.com" <pnwresearch24@gmail.com>
+CC: Dupont Police Department <Police@dupontwa.gov>
+Subject: RE:  PUBLIC RECORDS REQUEST OF 9/5/2024, Reference # PD-24091
+Thread-Topic: RE:  PUBLIC RECORDS REQUEST OF 9/5/2024, Reference # PD-24091
+Thread-Index: AdsVFHi0FIWsF7TVRDC7JwUkirVyww==
+Date: Wed, 2 Oct 2024 21:51:15 +0000
+Message-ID:
+ <PH0PR09MB80264FA0255568698BB1D2179F702@PH0PR09MB8026.namprd09.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=dupontwa.gov;
+x-ms-exchange-messagesentrepresentingtype: 1
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: PH0PR09MB8026:EE_|BY3PR09MB8739:EE_
+x-ms-office365-filtering-correlation-id: 4a7f1f9b-015f-45f7-6f8f-08dce32c5723
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|41320700013|366016|1800799024|38070700018;
+x-microsoft-antispam-message-info:
+ =?us-ascii?Q?cmR7bmW8+wJhl3YAK0TtFt0P5tUU+oZ39Ra23eMIG3H2TWC3qIbbRnwEgVZZ?=
+ =?us-ascii?Q?8pf4ZOil9++wa4Rc1So6iaQEY4iQ4d8dvMLlwhj1UUn4Qp+sWK8SQYFq2kg3?=
+ =?us-ascii?Q?aYSCIYqKpTeOi4f3UPOJgp8LGplr/BJLKxX+EaSj+6ah6grBByU4MK8l1vjb?=
+ =?us-ascii?Q?jWd/ih5eDBQCx3o7qJN24ZHDqxe0IvorlHnPRElPINCJyE2SVJKcKTl+6O/x?=
+ =?us-ascii?Q?VYlO5SxDvJEvtVgi81S3+hgQMyMuvwsKNur9ELadRFAx8w/tz65TCASUUMnm?=
+ =?us-ascii?Q?AVurug9GFqWgIPtMy2xkHbaKITOhdUq/K5iZ0kWyPgQoXjJBt/04RLOB7wX0?=
+ =?us-ascii?Q?ea2ZF1IvtJg4N18PvZ/zEtPNrZhqi6r6z/Ylrk0UW8Ka0thsgaBrijsoHxV2?=
+ =?us-ascii?Q?601i2dyBdl8Z3SplDXMjEyCe3ZcKlRcX+Rawu3xwfgahAs9njVS51Zf54Js2?=
+ =?us-ascii?Q?24Wq8NSrpkgUwRX9q3SAz+Tqaa/9Y5zJh5fLudKMytm+YDP2GtxhaV8YVdaQ?=
+ =?us-ascii?Q?ulKhDm2VkKQC2EKgmfLT6YLYay+ELHCwYbyE1SIu3+70zs5VttE4Ms1Hj/dg?=
+ =?us-ascii?Q?Ef7PHWzmZqwdzqXC6WrkM7pn6kHElUpzE/iVVjYYGDZy4rqy2qPBrNbpC/57?=
+ =?us-ascii?Q?lBsawhHpsLU91R5hKO7aTVOUJe15Wxmok5t4KRXDN3cjGJzvvi+0Yi3/q4EB?=
+ =?us-ascii?Q?mgkwN/vctCSwW01HuvBJbOIzybIgu+KVj74tCAXtyj/TzD3f9SEnxe59MCad?=
+ =?us-ascii?Q?s2XS2TBVmBgg6H4teWnx/K9EtgA+JO6kbgFTq8prraPsVh7zoFvyRVmHm+Cm?=
+ =?us-ascii?Q?P5jCKQzwdIn5CJ7BdAz0Igi6773EHRqkRh07oQwM3Krxb+BMKblJ11IBrD3d?=
+ =?us-ascii?Q?inxerj+UBxh51ODApmXEePxvs8ZKH7YKLanZQ7KUge59JAnwkjTsZtd2kFBd?=
+ =?us-ascii?Q?RPeY8x8DRu6JtLK9HFVak3323ifu/zt90aZ77Zcw3INcZkx38EDipA353fDQ?=
+ =?us-ascii?Q?t/IoWn7DR343QsyagiDSKqtcZBGhvl+X7tZ/AfPhFHG9xO0qdg6rPXHqL6EK?=
+ =?us-ascii?Q?+iMHqA8Jdr4V3cbDgmVKGVTTLMyzoVx5ar2LQbMMiUUJuO8Xfknh9PjQSgT1?=
+ =?us-ascii?Q?rcqqCRtDR/2U9IjfTPCcjg+f9i3+rHuJe8pW8xt2RXxhitS/BVgeESX5zCy8?=
+ =?us-ascii?Q?0fST+l1mBf6gTbdGn4O26AOuKrmbmyiVCIrC96MOr4kYsl/bThJvMN3+JBKK?=
+ =?us-ascii?Q?lDQRG43c8lLir4t5e6J0aCDx8Dsyp5EoUVfUNE1hAiNbsHnlQI/sZ4swQE07?=
+ =?us-ascii?Q?mn5twO4JRd8PNAN3TPayGWoC405JOStYxY6IoBgV8CXF2Q=3D=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:PH0PR09MB8026.namprd09.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(41320700013)(366016)(1800799024)(38070700018);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?us-ascii?Q?8bY+/AFQShaOi2qwJJ9CYEoF9StCOObFCSgpLk1tbhx09myHC8UxUWwt9APx?=
+ =?us-ascii?Q?YOD2jzgjnhy3crzTPGzu8SKgABHO9m55wmR1PFhdxZzgMXCcrVPrbeQEAlNW?=
+ =?us-ascii?Q?04vgmjODJuiTG5XwKqrh4JmefM10pddAhqu06WCtMToJ29KYp/JP3Y1o8G6x?=
+ =?us-ascii?Q?fFUJl02lw7QrA27dpdQ/WkD5TOhQBfQUTARBTjzIkcTif328+uKdvMrWdY+N?=
+ =?us-ascii?Q?upHk56c2ljH5xjonDLPgLnksU+Bt4S3axiuI0XTdi+8T7LohsBX6YLG23Wjs?=
+ =?us-ascii?Q?AJO7xYHDJ4KN8AN7QGQ2RGfSPk+4ONE0RBlzBCFqlJN5OGXSPQMcmuJx/5Xk?=
+ =?us-ascii?Q?BF1K6jhxE/i/pRzEwp1yoIzfhc7oUPPEjxK4ccY2Vh1TiIeVuiky2BXq9bcx?=
+ =?us-ascii?Q?PNkblu8M4tSKiCkBgPYtXhpW3La63hpsmipMJjljDOnqLa+Ri/v1Nrnhwy20?=
+ =?us-ascii?Q?FYTHo9kQDJeF8rMl4/wiV7ytAUCU/g5r6V9qvqcLy16GDcRlzu+VrBRNotZj?=
+ =?us-ascii?Q?gYmPLs3XdgKh/R3/kwAr1yBQfUEahN/532oGJPNPNmgTk5SBKxkqxomm+IU2?=
+ =?us-ascii?Q?gWxo2S5KQG7mkBdFRgTuddOJ34uRMh1CNqHJYO1NjdmMiyS1FO5yx7Agn04q?=
+ =?us-ascii?Q?AbtepfwFxm/5mMncUASUjaRMioTzlGl6XBWr0T0vK+jowX/8qCYcmR82JNtB?=
+ =?us-ascii?Q?vXIUOe2mBAz1y4M3eLUK2aovBUf4PflOD3PxdN+9wAXgm8Tf1gXZ5Rsxu+rt?=
+ =?us-ascii?Q?WMtofiyerpDKhh4dJ23oYes05V7fkhtayrzRGx6sAooe9rqxi4ESo/obJt9E?=
+ =?us-ascii?Q?qZz3O/2W3VdniIG+4jxBCdb6EXRJYWMdBjAKVcez13lvhWKEurAC72lGXYlF?=
+ =?us-ascii?Q?VY0VoZxbPAbg8zpjyN5LZnFQugFmwyXotgBD5sDaRGqlv+Iw6bGmvLxVQm1O?=
+ =?us-ascii?Q?h4fPUSYEMKsg/nNyRtsZ6yMdMi682hT7PNC2h0rm2xUUL4eoOgMkKHgkyp75?=
+ =?us-ascii?Q?GN8RTUZ8xrCfcZtd244El20zCutieCTSU7nFxO6eniNWfVsEuN3FeA4gjOf9?=
+ =?us-ascii?Q?H3VbCXmj4gq9roPdGivVgbV1cmThgWvbDnUUd7j1PpAvTbA0oQyY5A4++hCb?=
+ =?us-ascii?Q?Hh20wZ80OcaxzLCbBBEoajZq6YpjgcAst3kHvAPNIhpHuy1WJf9ecbbY+ykV?=
+ =?us-ascii?Q?w8CvZKJQGwz+zJbpYpt6mzWv6LbuPHqmGIBP+N+1SnxZMGGdKXrVj1CfpBcv?=
+ =?us-ascii?Q?pRx3x/XIBJfgBtoGQgYlxbxXkeafK9gO+4A+YnijFg7t8jqLM+cBd1yT6QH6?=
+ =?us-ascii?Q?+OfiuLtJhcvfCfAISH3Uv+GxzyCaemkkBvOZloH8ELiUwg0c3wc4+qvA9XcD?=
+ =?us-ascii?Q?r45BPV34BJz3+3hFjwLY8E6X+9691Hl9NAtu+c8g3Tjy2+yh5Igc0qvQyyKW?=
+ =?us-ascii?Q?32bbA8/s0Q8GIfFInrauG6LI0rMdG6mYj+DLxI8KMEDJ+b+BVG45+/xfjhmP?=
+ =?us-ascii?Q?CsVYqnvDG3dNgwqO4EasjIc1XfCLkQ6RrkojaAMgC/t69h005tEIrfSEOrEr?=
+ =?us-ascii?Q?l/WD30J1dtb+Ja6PYOO9LnsEhjIm1VupcK3rExFk?=
+Content-Type: multipart/alternative;
+	boundary="_000_PH0PR09MB80264FA0255568698BB1D2179F702PH0PR09MB8026namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: dupontwa.gov
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: PH0PR09MB8026.namprd09.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4a7f1f9b-015f-45f7-6f8f-08dce32c5723
+X-MS-Exchange-CrossTenant-originalarrivaltime: 02 Oct 2024 21:51:15.9517
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: df096279-404f-423d-9bbf-985e59a0da20
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY3PR09MB8739
+
+--_000_PH0PR09MB80264FA0255568698BB1D2179F702PH0PR09MB8026namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+RE:  PUBLIC RECORDS REQUEST OF 9/5/2024, Reference # PD-24091
+
+Dear Idris:
+The DuPont Police Department (DPD) received a public information request fr=
+om you, and your request mentioned:
+
+"1) A list of all vehicle pursuit incidents that your agency was involved i=
+n from 2019 through 2023, as a line-level data extract from your records ma=
+nagement system (RMS), including incident date, report number, and any/all =
+other RMS data fields that are not required to be redacted by law;"
+
+I attempted to reach you by phone this morning (10/2/24) to ask for clarifi=
+cation on part one (1) of your request, and was only able to leave a voicem=
+ail.  This letter is to clarify what information you are seeking from the D=
+uPont Police Department:
+
+By  the term "pursuit incidents that your agency was involved in," do you m=
+ean incidents in which DPD was actively involved in the pursuit of the subj=
+ect vehicle, or just involved in the incident in any capacity - such as ass=
+isting an outside agency with the investigation or the arrest (if applicabl=
+e), but not involved in the physical pursuit the subject vehicle?
+
+If you would like the DuPont Police department to proceed with your public =
+information request, please provide clarifications within thirty (30) days =
+from today, 10/2/24.  Otherwise, we will consider this portion of your requ=
+est abandoned and will close your request after providing any other respons=
+ive records relative to your request, if any.  You may provide a response t=
+o the DuPont Police Department by any of the following methods:
+
+
+
+  1.  by responding to this email
+  2.  by facsimile to (253) 964-8491
+  3.  by regular mail to:  DuPont Police Department, 1780 Civic Drive, Suit=
+e 100, DuPont WA 98327; or
+  4.  in person at:  DuPont Police Department, 1780 Civic Drive, Suite 100,=
+ DuPont WA 98327
+Upon receipt of your clarification, DPD will further respond to your public=
+ records request as required by law, including providing you with an estima=
+te of when the request will be fulfilled. If you have any questions, or wis=
+h to discuss this further, please contact us.
+
+Sincerely,
+Diana Hooft
+Administrative Division/Records
+DuPont Police Department
+
+Diana Hooft
+Diana Hooft
+Administrative Specialist/Chief of Staff
+DuPont Police Department
+
+
+While this e-mail may be subject to public disclosure, it originates from a=
+ general authority Washington State law enforcement agency, per RCW 10.93.0=
+20.  This e-mail may contain information which is Law Enforcement Sensitive=
+ [LES] or Privacy Act Sensitive to be used for official purposes only.  Any=
+ misuse or unauthorized disclosure may result in both civil and criminal pe=
+nalties.  If you believe you have received this email or it's attachments i=
+n error, please alert the DuPont Police Department immediately.
+
+
+--_000_PH0PR09MB80264FA0255568698BB1D2179F702PH0PR09MB8026namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+@font-face
+	{font-family:"Al Fresco";}
+@font-face
+	{font-family:Abadi;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParag=
+raphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListPar=
+agraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagra=
+phCxSpLast
+	{mso-style-priority:34;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:106%;
+	font-size:11.0pt;
+	font-family:"Aptos",sans-serif;
+	mso-ligatures:standardcontextual;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Aptos",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:57945246;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1257884458 -764134192 67698713 67698715 67698703 67=
+698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.75in;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:3.25in;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.75in;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">RE:&nbsp; PUBLIC RE=
+CORDS REQUEST OF 9/5/2024, Reference # PD-24091<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">Dear Idris:<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">The DuPont Police D=
+epartment (DPD) received a public information request from you, and your re=
+quest mentioned:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p=
+></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt">&#8220;1) A list=
+ of all vehicle pursuit incidents that your agency was involved in from 201=
+9 through 2023, as a line-level data extract from your records management s=
+ystem (RMS), including incident date, report
+ number, and any/all other RMS data fields that are not required to be reda=
+cted by law;&#8221;<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p=
+></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">I attempted to reac=
+h you by phone this morning (10/2/24) to ask for clarification on part one =
+(1) of your request, and was only able to leave a voicemail.&nbsp; This let=
+ter is to clarify what information you are
+ seeking from the DuPont Police Department:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p=
+></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt">By &nbsp;the ter=
+m &#8220;pursuit incidents that your agency was involved in,&#8221; do you =
+mean incidents in which DPD was actively involved in the pursuit of the sub=
+ject vehicle, or just involved in the incident in
+<i>any</i> capacity &#8211; such as assisting an outside agency with the in=
+vestigation or the arrest (if applicable), but not involved in the
+<u>physical</u> pursuit the subject vehicle?&nbsp; <o:p></o:p></span></b></=
+p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">If you would like t=
+he DuPont Police department to proceed with your public information request=
+, please provide clarifications within thirty (30) days from today, 10/2/24=
+.&nbsp; Otherwise, we will consider this
+ portion of your request abandoned and will close your request after provid=
+ing any other responsive records relative to your request, if any.&nbsp; Yo=
+u may provide a response to the DuPont Police Department by any of the foll=
+owing methods:<o:p></o:p></span></p>
+<p class=3D"MsoListParagraphCxSpFirst" style=3D"margin-left:.75in;mso-add-s=
+pace:auto">
+<span style=3D"font-size:18.0pt;line-height:106%"><o:p>&nbsp;</o:p></span><=
+/p>
+<ol style=3D"margin-top:0in" start=3D"1" type=3D"1">
+<li class=3D"MsoListParagraphCxSpMiddle" style=3D"margin-left:.25in;mso-add=
+-space:auto;mso-list:l0 level1 lfo1">
+<span style=3D"font-size:18.0pt;line-height:106%">by responding to this ema=
+il<o:p></o:p></span></li><li class=3D"MsoListParagraphCxSpMiddle" style=3D"=
+margin-left:.25in;mso-add-space:auto;mso-list:l0 level1 lfo1">
+<span style=3D"font-size:18.0pt;line-height:106%">by facsimile to (253) 964=
+-8491<o:p></o:p></span></li><li class=3D"MsoListParagraphCxSpMiddle" style=
+=3D"margin-left:.25in;mso-add-space:auto;mso-list:l0 level1 lfo1">
+<span style=3D"font-size:18.0pt;line-height:106%">by regular mail to:&nbsp;=
+ DuPont Police Department, 1780 Civic Drive, Suite 100, DuPont WA 98327; or=
+<o:p></o:p></span></li><li class=3D"MsoListParagraphCxSpLast" style=3D"marg=
+in-left:.25in;mso-add-space:auto;mso-list:l0 level1 lfo1">
+<span style=3D"font-size:18.0pt;line-height:106%">in person at:&nbsp; DuPon=
+t Police Department, 1780 Civic Drive, Suite 100, DuPont WA 98327<o:p></o:p=
+></span></li></ol>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">Upon receipt of you=
+r clarification, DPD will further respond to your public records request as=
+ required by law, including providing you with an estimate of when the requ=
+est will be fulfilled. If you have any
+ questions, or wish to discuss this further, please contact us.<o:p></o:p><=
+/span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">Sincerely,<o:p></o:=
+p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">Diana Hooft<o:p></o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">Administrative Divi=
+sion/Records<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt">DuPont Police Depar=
+tment<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:18.0pt"><o:p>&nbsp;</o:p=
+></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:18.0pt;font-family:&quot;Al=
+ Fresco&quot;">Diana Hooft<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ab=
+adi&quot;,sans-serif">Diana Hooft<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ab=
+adi&quot;,sans-serif">Administrative Specialist/Chief of Staff<o:p></o:p></=
+span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ab=
+adi&quot;,sans-serif">DuPont Police Department<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b><i><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Calibri&quot;,sans-serif">While this e-mail may be subject to public di=
+sclosure, it originates from a general authority Washington State law enfor=
+cement agency, per RCW 10.93.020.&nbsp; This e-mail
+ may contain information which is Law Enforcement Sensitive [LES] or Privac=
+y Act Sensitive to be used for official purposes only.&nbsp; Any misuse or =
+unauthorized disclosure may result in both civil and criminal penalties.&nb=
+sp; If you believe you have received this
+ email or it&#8217;s attachments in error, please alert the DuPont Police D=
+epartment immediately.<o:p></o:p></span></i></b></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_PH0PR09MB80264FA0255568698BB1D2179F702PH0PR09MB8026namp_--
