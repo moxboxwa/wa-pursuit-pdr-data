@@ -10,7 +10,7 @@ library(readxl)
 
 # Read data from the downloaded file
 
-snohomish. <- read_xlsx("County-SO-Data/Snohomish/Snohomish.xlsx")
+snohomish <- read_xlsx("County-SO-Data/Snohomish/Snohomish.xlsx")
 
 snohomish.tbl <- read_xlsx(
   "County-SO-Data/Snohomish/Snohomish.xlsx",
