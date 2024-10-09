@@ -1,3 +1,4 @@
+rm(list=ls())
 library(googlesheets4) # only needed if data are stored in a googlesheet
 library(googledrive)
 library(readxl)
@@ -26,5 +27,6 @@ king.tbl <- read_xlsx(
   sheet = "Table",
   skip = 2
 )
-  
+
+rm(dl)  
 save.image(file="County-SO-Data/King/King.rda")
