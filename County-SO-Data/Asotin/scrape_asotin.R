@@ -27,4 +27,5 @@ asotin.tbl <- read_xlsx(
   skip = 2
 )
 
+rm("dl")
 save.image(file="County-SO-Data/Asotin/Asotin.rda")
