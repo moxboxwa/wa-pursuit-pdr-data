@@ -1,0 +1,17 @@
+From:  https://police.wsu.edu/author/gary-jenkins/
+
+Disposition Key:
+ACT: Active
+CLO: Closed Case
+AM: Alarm Malfunction
+ECP: Cleared Adult Prosecution Declined
+CAA: Cleared Adult Arrest
+ECV: Cleared Adult Victim/Uncooperative
+CEE: Created in Error
+EE: Employee Error
+CJA: Cleared Juvenile Arrest
+TRP: Transferred to Property
+RSP: Request Submit to Prosecutor
+RSJ: Request Submit to Juvenile Services
+TRA: Transferred
+WRN: Warning Issued
