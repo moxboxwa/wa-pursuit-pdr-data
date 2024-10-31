@@ -2,6 +2,8 @@ library(googlesheets4) # only needed if data are stored in a googlesheet
 library(googledrive)
 library(readxl)
 
+rm(list=ls())
+
 # Examples to see if you can find/specify a unique folder and filename
 # See: https://googledrive.tidyverse.org/reference/drive_find.html
 # The googledrive functions should pop up an authorization dialog in your
@@ -9,6 +11,7 @@ library(readxl)
 
 drive_find("Grant County", type="folder")
 #drive_get("Grant County/Grant.xlsx")
+
 
 # Download an excel file from the drive
 dl <- drive_download(file = "Grant County/Grant.xlsx", # google drive filename

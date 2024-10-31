@@ -7,8 +7,7 @@ library(readxl)
 # The googledrive functions should pop up an authorization dialog in your
 # web-browser if necessary
 
-#drive_find("Asotin County", type="folder")
-#drive_get("Asotin County/Asotin.xlsx")
+rm(list=ls())
 
 # Download an excel file from the drive
 dl <- drive_download(file = "Douglas County/Douglas.xlsx", # google drive filename

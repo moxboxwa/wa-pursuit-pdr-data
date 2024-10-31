@@ -6,7 +6,7 @@ library(readxl)
 # See: https://googledrive.tidyverse.org/reference/drive_find.html
 # The googledrive functions should pop up an authorization dialog in your
 # web-browser if necessary
-
+rm(list=ls())
 
 
 #converted data from email pdf into table and saved in computer
