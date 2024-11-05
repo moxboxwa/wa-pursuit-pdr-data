@@ -2,6 +2,7 @@ library(googlesheets4) # only needed if data are stored in a googlesheet
 library(googledrive)
 library(readxl)
 
+rm(list=ls())
 
 #I converted the PDF on google drive into an excel on my computer
 

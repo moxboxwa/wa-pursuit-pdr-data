@@ -2,6 +2,7 @@ library(googlesheets4) # only needed if data are stored in a googlesheet
 library(googledrive)
 library(readxl)
 
+rm(list=ls())
 # Examples to see if you can find/specify a unique folder and filename
 # See: https://googledrive.tidyverse.org/reference/drive_find.html
 # The googledrive functions should pop up an authorization dialog in your
@@ -17,12 +18,12 @@ dl <- drive_download(file = "Grays Harbor County/GraysHarbor.xlsx", # google dri
                      type = "xlsx")
 
 # Read data from the downloaded file
-graysharbor.inci <- read_xlsx("County-SO-Data/Grays Harbor/GraysHarbor.xlsx")
+graysharbor.inci <- read_xlsx("County-SO-Data/GraysHarbor/GraysHarbor.xlsx")
 
 graysharbor.tbl <- read_xlsx(
-  "County-SO-Data/Grays Harbor/GraysHarbor.xlsx",
+  "County-SO-Data/GraysHarbor/GraysHarbor.xlsx",
   sheet = "Table",
-  skip = 2
+  skip = 3
 )
 
-save.image(file="County-SO-Data/Grays Harbor/Grays Harbor.rda")
+save.image(file="County-SO-Data/GraysHarbor/Grays Harbor.rda")

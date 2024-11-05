@@ -16,4 +16,4 @@ klickitat.tbl <- read_xlsx(
   skip = 2
 )
 
-save.image(file="County-SO-Data/Klickitat/Klickitat.xrda")
+save.image(file="County-SO-Data/Klickitat/Klickitat.rda")
