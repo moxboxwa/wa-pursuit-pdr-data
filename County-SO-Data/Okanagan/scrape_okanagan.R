@@ -1,6 +1,7 @@
 library(googlesheets4) # only needed if data are stored in a googlesheet
 library(googledrive)
 library(readxl)
+rm(list=ls())
 
 # Examples to see if you can find/specify a unique folder and filename
 # See: https://googledrive.tidyverse.org/reference/drive_find.html
@@ -24,7 +25,7 @@ okanagan.inci <- read_xlsx("County-SO-Data/Okanagan/Okanagan.xlsx")
 okanagan.tbl <- read_xlsx(
   "County-SO-Data/Okanagan/Okanagan.xlsx",
   sheet = "Table",
-  skip = 2
+  skip = 4
 )
 
 save.image(file="County-SO-Data/Okanagan/Okanagan.rda")
