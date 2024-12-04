@@ -23,3 +23,7 @@ Each project has a separate tracker:
   * [County Sheriff's offices + WSP](https://github.com/users/moxboxwa/projects/2)
   * [Accredited agencies](https://github.com/users/moxboxwa/projects/1)
   * [Pierce Co](https://github.com/users/moxboxwa/projects/3)
+
+# Worksheet for data variables collected
+This is a [googlesheet](https://docs.google.com/spreadsheets/d/1b0pcy8-iQUNAAHFcpCz5qKYN55RA87iJMTw6Zl2UMt0/edit?gid=0#gid=0)
+
