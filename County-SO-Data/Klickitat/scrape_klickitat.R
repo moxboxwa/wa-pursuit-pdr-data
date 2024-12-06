@@ -11,8 +11,13 @@ library(readxl)
 # Read data from the downloaded file
 # no inci level data
 
+klickitat.inci <- read_xlsx("County-SO-Data/Klickitat/Klickitat.xlsx")
+
+
+
 klickitat.tbl <- read_xlsx(
   "County-SO-Data/Klickitat/Klickitat.xlsx",
+  sheet="Table" 
   skip = 2
 )
 
