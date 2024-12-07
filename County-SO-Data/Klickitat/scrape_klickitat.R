@@ -13,12 +13,9 @@ library(readxl)
 
 klickitat.inci <- read_xlsx("County-SO-Data/Klickitat/Klickitat.xlsx")
 
-
-
-klickitat.tbl <- read_xlsx(
+klickitat.tbl <-read_xlsx(
   "County-SO-Data/Klickitat/Klickitat.xlsx",
-  sheet="Table" 
-  skip = 2
+  sheet="Table",
 )
 
 save.image(file="County-SO-Data/Klickitat/Klickitat.rda")
