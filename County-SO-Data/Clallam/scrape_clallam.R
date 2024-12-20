@@ -24,7 +24,7 @@ clallam.inci <- read_xlsx("County-SO-Data/Clallam/Clallam.xlsx")
 clallam.tbl <- read_xlsx(
   "County-SO-Data/Clallam/Clallam.xlsx",
   sheet = "Table",
-  skip = 2
+  skip = 3
 )
 
 save.image(file="County-SO-Data/Clallam/Clallam.rda")

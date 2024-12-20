@@ -22,7 +22,7 @@ cowlitz.inci <- read_xlsx("County-SO-Data/Cowlitz/Cowlitz.xlsx")
 cowlitz.tbl <- read_xlsx(
   "County-SO-Data/Cowlitz/Cowlitz.xlsx",
   sheet = "Table",
-  skip = 2
+  skip = 3
 )
 
 save.image(file="County-SO-Data/Cowlitz/Cowlitz.rda")
