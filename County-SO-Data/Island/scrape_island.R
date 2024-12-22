@@ -11,9 +11,13 @@ library(readxl)
 # Read data from the downloaded file
 # no inci level data
 
+island.inci <- read_xlsx("County-SO-Data/Island/Island.xlsx")
+
+
 island.tbl <- read_xlsx(
   "County-SO-Data/Island/Island.xlsx",
-  skip = 2
+  sheet = "Table",
+  skip = 3
 )
 
 save.image(file="County-SO-Data/Island/Island.rda")

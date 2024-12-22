@@ -1,5 +1,5 @@
-library(googlesheets4) # only needed if data are stored in a googlesheet
-library(googledrive)
+# library(googlesheets4) # only needed if data are stored in a googlesheet
+# library(googledrive)
 library(readxl)
 
 # Examples to see if you can find/specify a unique folder and filename
@@ -9,13 +9,15 @@ library(readxl)
 
 
 # Read data from the downloaded file
-# no inci level data
 
+# inci level data
 klickitat.inci <- read_xlsx("County-SO-Data/Klickitat/Klickitat.xlsx")
 
-klickitat.tbl <-read_xlsx(
+# very few pursuits, so table was manually constructed
+klickitat.tbl <- read_xlsx(
   "County-SO-Data/Klickitat/Klickitat.xlsx",
-  sheet="Table",
+  sheet = "Table",
+  skip = 2
 )
 
 save.image(file="County-SO-Data/Klickitat/Klickitat.rda")
