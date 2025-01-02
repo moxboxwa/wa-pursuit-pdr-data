@@ -22,12 +22,13 @@ dl <- drive_download(file = "Lewis County/Lewis.xlsx", # google drive filename
 # Read data from the downloaded file
 # KC gave us incident-based data, so we have both that and the pivot table
 
-lewis.inci <- read_xlsx("County-SO-Data/Lewis/Lewis.xlsx")
+lewis.inci <- read_xlsx("County-SO-Data/Lewis/Lewis.xlsx",
+                        skip = 2)
 
 lewis.tbl <- read_xlsx(
   "County-SO-Data/Lewis/Lewis.xlsx",
   sheet = "Tables",
-  skip = 2
+  skip = 3
 )
 
 save.image(file="County-SO-Data/Lewis/Lewis.rda")

@@ -21,7 +21,8 @@ dl <- drive_download(file = "Yakima County/Yakima.xlsx", # google drive filename
 # Read data from the downloaded file
 # KC gave us incident-based data, so we have both that and the pivot table
 
-yakima.inci <- read_xlsx("County-SO-Data/Yakima/Yakima.xlsx")
+yakima.inci <- read_xlsx("County-SO-Data/Yakima/Yakima.xlsx",
+                         skip = 1)
 
 yakima.tbl <- read_xlsx(
   "County-SO-Data/Yakima/Yakima.xlsx",
