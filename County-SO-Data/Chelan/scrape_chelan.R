@@ -19,13 +19,13 @@ dl <- drive_download(file = "Kitsap County/Kitsap.xlsx", # google drive filename
                      type = "xlsx")
 
 # Read data from the downloaded file
-# KC gave us incident-based data, so we have both that and the pivot table
 
 # did not give inci level data 
 
 chelan.tbl <- read_xlsx(
   "County-SO-Data/Chelan/Chelan.xlsx",
   sheet = "Table",
+  skip = 1
 )
 
 save.image(file="County-SO-Data/Chelan/Chelan.rda")
