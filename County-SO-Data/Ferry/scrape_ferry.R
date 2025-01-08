@@ -10,12 +10,15 @@ rm(list=ls())
 # web-browser if necessary
 
 
-# Read data from the downloaded file
-# no inci level data
+# Read data from the *repo* file, not the google drive
+# inci level data transcribed from the correspondence, just month and year
 
 ferry.inci <- read_xlsx(
-  "County-SO-Data/Ferry/Ferry.xlsx",
+  "County-SO-Data/Ferry/Ferry.xlsx")
 
+ferry.table <- read_xlsx(
+  "County-SO-Data/Ferry/Ferry.xlsx",
+  sheet = "Table"
 )
 
 save.image(file="County-SO-Data/Ferry/Ferry.rda")
