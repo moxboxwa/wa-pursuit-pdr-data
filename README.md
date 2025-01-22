@@ -14,8 +14,11 @@ Project / Agency / Content
 Each project has a folder in the repository, with subfolders for each agency, and within the agency, subfolders for:
 
   * *Correspondence* -- All correspondence with the agency, including a copy of the initial request (b/c these may be tweaked over time and we need to have a record of what we asked for.)
-  * *OriginalData* -- The original datafile(s) sent by the agency
-  * *CleanData* -- An excel file with the cleaned data in harmonized format.  Line level incident data is stored in a tab named "Incidents", summary tabular data in a tab named "Table"
+  * *Policies* -- As sent by the agency
+  * *Summaries* -- As sent by the agency - should be pursuit-related reports (annual and otherwise) but we got lots of other things under this rubric.
+  * *Data* --
+    - *Original* -- Folder with the original datafile(s) sent by the agency
+    - *[agencyName].xlsx* -- An excel file with the cleaned data in harmonized format.  Line level incident data is stored in a tab named "Incidents", summary tabular data in a tab named "Table"
 
  ## Trackers
 
