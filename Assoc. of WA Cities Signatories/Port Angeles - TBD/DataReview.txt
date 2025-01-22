@@ -1,0 +1,29 @@
+Cases in FB screenshots, not in either file:
+
+Port Angeles Police Department
+at 21:31:48 on 9/14/2022 UTC
+What Happened This Morning In Port Angeles? (2022-164481)
+This morning at approximately 5:57 AM a PAPD Sergeant in a fully marked police sedan was on duty and westbound on Hwy 101 near Deer Park Rd. A black sedan approached the police vehicle from behind and while traveling at a high rate of speed. The Sergeant attempted to make a traffic stop.
+
+
+From 2022 post:
+Port Angeles Police Department
+at 18:14:05 on 1/11/2023 UTC
+Port Angeles Police Department 2022 Pursuits Near Double the 5 Year Average
+
+On June 15 Officers attempted to stop a vehicle driven in a very erratic manner. The pursuit ended with an unintentional collision between the suspect vehicle and a responding officer. The suspect was apprehended
+
+On August 24 Officers responded to a report of two people sleeping in a stolen vehicle on the side of the road.  When contacted the suspect, who appeared to be impaired drove away, which resulted in a pursuit. The pursuit ended when the pursued vehicle crossed the centerline and collided with an oncoming vehicle. The driver was apprehended at the scene. The passenger was apprehended later. [matching date in PURSUIT xls file, but description doesn't seem to match]
+
+On September 14 an Officer attempted to stop a vehicle driven in an erratic manner. The officer discontinued the pursuit due to safety concerns. The suspect was not apprehended. [matching date in PURSUIT xls file, but description doesn't seem to match]
+
+
+
+Annual stats reported in FB: "It should be noted that these pursuits do not contain “Fail to Yield” incidents that did not rise to the level of a pursuit."  (# arrests from the PAPD case offense ELUDE file)
+
+2017	5
+2018	4
+2019	5  (3 arrests)
+2020	4  (3 arrests)
+2021	3  (3 arrests)
+2022	8  (5 arrests)
