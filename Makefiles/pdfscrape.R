@@ -1,6 +1,23 @@
 library(tidyverse)
 library(pdftools)
 
+# Yakima (works, see https://stackoverflow.com/questions/78787068/how-to-parse-pdf-in-r-and-then-correctly-convert-or-extract-spaced-tabbed-pieces)
+
+jan_raw <- pdf_text("County-SO-Data/Yakima/OriginalData/JAN_2019_ELUDING.pdf")
+jan_rows <- strsplit(jan_raw, split = "\n")
+incinum <- length(jan_rows[[1]]) -1
+
+jan <- c(
+  "  Incident Nature Area Agency Rdate Rtime Disposition",
+  jan_rows[[1]][6:incinum]  # strips off orig col headers
+  )  %>%
+  strsplit(" +") %>%
+  Filter(f = \(x) length(x) == 8) %>%
+  lapply(paste, collapse = ",") %>%
+  do.call(what = "c") %>%
+  read.csv(text = ., check.names = FALSE) %>%
+  select(-1)
+  
 
 
 # Adams
