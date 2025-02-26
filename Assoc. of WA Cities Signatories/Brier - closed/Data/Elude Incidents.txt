@@ -1,0 +1,4 @@
+Call Date/Time: Incident Type | Incident Number | Officers. Location
+
+10/16/2023 01:29:09 | Elude 202300003281 | BPOB16- Dike 13210 HWY 98, Everett |
+06/14/2023 20:46:49 | Elude 202300001954 | BPOB13 - Montague BOTHELL EVERETT Hw / 228TH ST SE, Bothell
