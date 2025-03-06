@@ -1,0 +1,30 @@
+Reason initiated
+Time of day	
+Initial violation
+Weather condition
+Pursuit distance
+Type of vehicle pursued
+Pursuit beginning location
+Pursuit ending location
+Agency initiating pursuit
+Agency ending pursuit
+Event that concluded the pursuit
+Driving under the influence factors
+In-car camera available
+In-car camera used
+The pursuit was aborted
+An accident occurred during the pursuit
+Driver being pursued was arrested for DUI
+Aerial vehicle was available to assist
+Aerial vehicle was used to assist
+Stop device was used
+Type of stop device that was used
+Liability claim filed
+Pursuit justified
+Pursuit within policy
+Citizen injury tally
+Employee injury tally
+
+
+
+
