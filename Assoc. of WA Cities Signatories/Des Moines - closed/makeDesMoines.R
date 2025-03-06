@@ -22,8 +22,3 @@ demoines.notes <- list(format = "xls",
 
 save.image("Assoc. of WA Cities Signatories/Des Moines - closed/desmoines.rda")
 
-desmoines.inci %>%
-  group_by(yr, mo) %>%
-  count() %>%
-  ggplot(aes(x=factor(mo), y=n, group = yr, color=yr)) +
-  geom_line()
