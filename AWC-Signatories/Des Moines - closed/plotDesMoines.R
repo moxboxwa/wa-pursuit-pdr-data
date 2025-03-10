@@ -1,3 +1,4 @@
+library(tidyverse)
 library(ggplot2)
 library(plotly)
 
@@ -38,17 +39,24 @@ p <- ggplot(df_by_month,
             aes(x = numdate, y = count)
        )  +
   
-  geom_point(aes(fill = factor(yr),
-                 text = paste0(mon.yr, ": ", count)),
-             size=1.5, shape=21, stroke=0.25) +
+  # points - not used
+  # geom_point(aes(fill = factor(yr),
+  #                text = paste0(mon.yr, ": ", count)),
+  #            size=1.5, shape=21, stroke=0.25) +
+  
+  geom_bar(aes(fill = factor(yr), text = paste0(mon.yr, ": ", count)),
+           alpha=0.5, color="grey",
+           stat="identity"
+  ) +
+  scale_fill_brewer(palette="Spectral") +
              
-  geom_smooth() +
+  geom_smooth(linetype="dot", linewidth=.5) +
   
   # year boundaries
   geom_vline(xintercept = yrs, col="white", alpha=.5) +
   
   # reform date
-  geom_vline(xintercept = date.reform, col="blue", alpha=.5) +
+  geom_vline(xintercept = date.reform, col="darkgrey", alpha=.5) +
   annotate("text", x=(as.numeric(date.reform)+150), y=max(df_by_month$count), 
            label="Post Reform",
            size=3) +
@@ -59,7 +67,7 @@ p <- ggplot(df_by_month,
   geom_hline(yintercept = 0, col="grey") +
   
   labs(title = paste("Monthly pursuits: DesMoines", min(index$yr), "-", max(index$yr)),
-       x = "Month/Year",
+       x = "Month.Year",
        y = "Number of pursuits",
        #caption = paste("DesMoines", min(index$yr), "-", max(index$yr)),
        fill = "Year") +
@@ -69,9 +77,9 @@ p <- ggplot(df_by_month,
     label = df_by_month$mon.yr[seq(1, nrow(df_by_month), 6)]
   )  +
   
-  scale_y_continuous(limits = c(-1, NA), breaks = 0:max(df_by_month$count)) +
+  scale_y_continuous(limits = c(-0.5, NA), breaks = 0:max(df_by_month$count)) +
   
-  theme(axis.text.x = element_text(size=5, angle = 45, vjust = 0.5)) +
+  theme(axis.text.x = element_text(size=7, angle = 45, vjust = 0.5)) +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 
